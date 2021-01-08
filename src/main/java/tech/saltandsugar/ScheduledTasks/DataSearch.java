@@ -33,9 +33,9 @@ public class DataSearch {
         Path CSV_FileLocation;
         //TODO ゴリ押しな気がするので直したい(美しくない)
         if (Array_nowDate[1].length() == 1) {
-            CSV_FileLocation = Paths.get(DATA_FOLDER_PATH + "kyushoku_20200" + Array_nowDate[1] + ".csv");
+            CSV_FileLocation = Paths.get(DATA_FOLDER_PATH + "kyushoku_" + Array_nowDate[0] + "0" + Array_nowDate[1] + ".csv");
         } else {
-            CSV_FileLocation = Paths.get(DATA_FOLDER_PATH + "kyushoku_2020" + Array_nowDate[1] + ".csv");
+            CSV_FileLocation = Paths.get(DATA_FOLDER_PATH + "kyushoku_" + Array_nowDate[0] + Array_nowDate[1] + ".csv");
         }
         ArrayList<String[]> data = dataProcessor.CSV_toArrayList(CSV_FileLocation);
         if(data==null){
